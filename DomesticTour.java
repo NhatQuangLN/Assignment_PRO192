@@ -26,7 +26,9 @@ public class DomesticTour extends Tour {
         super (tourCode, tourTile, tourPrice, tourTransport, startDate, endDate);
         this.tourGuideTip = tourGuideTip;
     }
-    
+    public DomesticTour(String tourCode){
+        this.tourCode = tourCode;
+    }
     public double getTourGuideTip() {
         return tourGuideTip;
     }
@@ -61,7 +63,7 @@ public class DomesticTour extends Tour {
     public String toString(){
         return super.toString() + ", TourGuideTrip= " + tourGuideTip  + '}'; 
     }
-    public DomesticTour input(){
+    public DomesticTour input(String tourCode){
         DomesticTour domesTour = new DomesticTour();
         domesTour.setTourCode(tourCode);
         domesTour.setTourTitle(tourTitle);

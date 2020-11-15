@@ -54,26 +54,41 @@ public class Assignmnet_PRO192_TQT {
                         System.out.println(tourlist.DomesTourList().get(i));
                     break;
                 case 3:
-                    System.out.print("Average tour charge of all international tours is: " + tourlist.averageInterToursCharge());
+                    System.out.println("Average tour charge of all international tours is: " + tourlist.averageInterToursCharge());
                     break;
                 case 4:
                     tourlist.searchTour();
                     break;
                 case 5: 
+                    System.out.println("The first occurrence of the tour having minimum tour charge is:");
+                    System.out.println(tourlist.searchFirstOccurHavingMimTourCharge());
                     break;
                 case 6:
+                    System.out.print("Input tourCode to remove: ");
+                    String tourCode = sc.nextLine();
+                    if (tourlist.checkTourCode(tourCode)){
+                        tourlist.removeTourCode(tourCode);
+                        System.out.println("Remove Success!");
+                    }else {
+                        System.out.println("tourCode doesn't exist.");
+                    }
                     break;
                 case 7:
+                    System.out.println("Input a date to remove all tours'start date after that: ");
+                    String date = sc.nextLine();
+                    if (tourlist.removeTourDate(date) > 0)
+                        System.out.println("Remove Success " + tourlist.removeTourDate(date) + "tours." );
+                    else 
+                        System.out.println("Remove 0 tour.");
                     break;
                 case 8:
+                    tourlist.sortTour();
                     break;
                 case 9:
                     break;
                 case 10:
                     break;
                 case 11:
-                    break;
-                case 12:
                     break;
                 default : 
                     System.out.println("Goodbye!");

@@ -61,7 +61,7 @@ public class InternationalTour extends Tour {
                 + ", entryFee= " + entryFee + + '}';
     }
     
-    public InternationalTour input(){
+    public InternationalTour input(String tourCode){
         InternationalTour interTour = new InternationalTour();
         interTour.setTourCode(tourCode);
         interTour.setTourTitle(tourTitle);

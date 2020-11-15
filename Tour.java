@@ -41,8 +41,6 @@ public abstract class Tour implements ITour {
     }
     
     public void setTourCode(String tourCode) {
-        System.out.print("Input tourCode: ");
-        tourCode = sc.next();
         this.tourCode = tourCode;
     }
 
@@ -51,7 +49,6 @@ public abstract class Tour implements ITour {
     }
 
     public void setTourTitle(String tourTitle) {
-        sc.nextLine();
         System.out.print("Input tourTitle: ");
         tourTitle = sc.nextLine();
         this.tourTitle = tourTitle;
@@ -82,7 +79,7 @@ public abstract class Tour implements ITour {
     }
 
     public void setStartDate(String startDate) {
-        System.out.print("Input startDate(dd/MM/yyy): ");
+        System.out.print("Input startDate(dd/MM/yyyy): ");
         startDate = sc.next();
         this.startDate = startDate;
     }
@@ -93,7 +90,7 @@ public abstract class Tour implements ITour {
 
     public void setEndDate(String endDate) {
         sc.nextLine();
-        System.out.print("Input endDate(dd/MM/yyy): ");
+        System.out.print("Input endDate(dd/MM/yyyy): ");
         endDate = sc.next();
         this.endDate = endDate;
     }
@@ -108,7 +105,9 @@ public abstract class Tour implements ITour {
                 + ", endDate= " + endDate ;
     }
     
- 
-
+    /**
+     *
+     * @return
+     */
     public abstract double surcharge();
 }
